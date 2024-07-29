@@ -17,6 +17,7 @@
     "@iconify/json": "^2.2.44",
     "@pinia-plugin-persistedstate/nuxt": "^1.1.1",
     "@pinia/nuxt": "^0.4.7",
+    "@types/uuid": "^10.0.0",
     "ant-design-vue": "^3.2.15",
     "cos-js-sdk-v5": "^1.4.16",
     "cos-nodejs-sdk-v5": "^2.11.19",
@@ -31,6 +32,6 @@
     "sass": "^1.60.0",
     "unplugin-icons": "^0.16.1",
     "unplugin-vue-components": "^0.24.1",
-    "uuid": "^9.0.0"
+    "uuid": "^10.0.0"
   }
 }
