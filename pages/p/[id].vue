@@ -188,7 +188,7 @@ useHead({
           font-size: 12px;
           margin-left: 6px;
         }
-        .jsd-meta,{
+        .jsd-meta {
           color: #E05344;
           display: flex;
           align-items: center;

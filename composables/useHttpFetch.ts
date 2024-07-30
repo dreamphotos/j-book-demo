@@ -14,7 +14,7 @@ const getBaseUrl = () => {
       //SSR请求内网
       baseURL = 'http://127.0.0.1:3000/'
     } else {
-      baseURL = 'http://jbook.XXX.com/'
+      baseURL = 'http://47.93.1.210:80/'
     }
   } else {
     //本地开发环境
