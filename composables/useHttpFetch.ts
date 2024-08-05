@@ -44,7 +44,7 @@ export const useHttpFetch = (url: string, opt: myFetchOptions) => {
     // @ts-ignore
     onRequestError({ request, options, error }) {
       // Handle the request errors
-      console.log('request', request)
+      console.log('request error', request)
     },
     // @ts-ignore
     async onResponse({ request, response, options }) {
@@ -61,7 +61,7 @@ export const useHttpFetch = (url: string, opt: myFetchOptions) => {
     // @ts-ignore
     async onResponseError({ request, response, options }) {
       // Handle the response errors
-      console.log('error', response.status)
+      console.log('response error', response.status)
       //https://github.com/nuxt/nuxt/issues/14771
       //未登录401状态
       if (response.status === 401) {
@@ -88,8 +88,8 @@ export const registerFetch = (opt: myFetchOptions) => {
 export const loginFetch = (opt: myFetchOptions) => {
   return useHttpFetch('/api/auth/login', opt)
 }
-//文集接口
 
+//文集接口
 export const notebookFetch = (opt: myFetchOptions) => {
   return useHttpFetch('/api/note/notebook', opt)
 }

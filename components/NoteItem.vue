@@ -70,9 +70,10 @@ const lists = reactive({
     font-size: 13px;
     line-height: 24px;
     color: #999;
-    overflow : hidden;
+    overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
+    line-clamp: 2;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
   }
@@ -89,7 +90,7 @@ const lists = reactive({
     svg{
       font-size: 11px;
     }
-    .jsd-meta,{
+    .jsd-meta {
       color: #E05344;
       display: flex;
       align-items: center;

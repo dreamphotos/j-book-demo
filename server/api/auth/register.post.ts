@@ -37,6 +37,7 @@ export default defineEventHandler(async (event)=>{
        //查询数据库
        const [rows] = await con.execute('select * from `users` where `phone`=?',[body.phone]);
        console.log('22222',rows)
+       // @ts-ignore
        if (rows.length > 0){
            return responseJson(1,'账号已注册',{})
        }
@@ -45,6 +46,7 @@ export default defineEventHandler(async (event)=>{
        console.log('333333',rows2)
        //释放连接
        await con.end()
+       // @ts-ignore
        if (rows2.affectedRows === 1){
            return  responseJson(0,'注册成功',{})
        }

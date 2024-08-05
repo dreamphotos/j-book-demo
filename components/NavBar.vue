@@ -5,7 +5,6 @@
         <a-row type="flex" justify="space-between">
           <a-col :span="4">
             <NuxtLink to="/">
-
               <img class="logo" alt="logo" src="/images/logo.png" />
             </NuxtLink>
           </a-col>
@@ -24,7 +23,6 @@
                 <NuxtLink to="/"><i-mdi-file-code-outline />IT技术</NuxtLink>
               </a-col>
               <a-col :span="3" class="nav-item">
-
                 <NuxtLink to="/"><i-mdi-bell-ring-outline />消息</NuxtLink>
               </a-col>
               <a-col :span="7" class="nav-item">
@@ -51,6 +49,7 @@
                   <div class="avatar">
                     <a-avatar :size="40">
                       <template #icon>
+                        <!-- @vue-ignore -->
                         <img :src="userInfo?userInfo.avatar:'/images/default-avatar.png'" alt="avatar">
                       </template>
                     </a-avatar>

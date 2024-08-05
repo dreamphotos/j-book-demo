@@ -18,6 +18,7 @@ export default defineEventHandler(async (event)=>{
         //获取用户文章
         const [notesData] = await con.query('SELECT notes.id AS id,notes.title,notes.content_md,notes.uid,users.nickname FROM `notes` LEFT JOIN `users` ON notes.uid = users.id WHERE `state`=? LIMIT ? OFFSET ?',
             [2,Number(params.pageSize),(Number(params.page)-1)*Number(params.pageSize)]);
+        // @ts-ignore
         notesData.map((v:any)=>{
             v.subTitle = trimMarkdown(v.content_md,300)
             v.cover = getFirstImage(v.content_md)

@@ -38,6 +38,7 @@ export default defineEventHandler(async (event)=>{
         const [rows] = await con.execute('SELECT * FROM `users` WHERE `phone`=? AND `password`=?',
             [body.phone,password]);
         console.log('22222',rows)
+        // @ts-ignore
         if (rows.length === 0){
             return responseJson(1,'账号不存在或者密码错误',{})
         }
@@ -47,7 +48,8 @@ export default defineEventHandler(async (event)=>{
         //秘钥
         let secret = 'eifuisedfuvs'
         let token = jwt.sign({
-            exp: Math.floor(Date.now() / 1000) + (60 * 60),
+            exp: Math.floor(Date.now() / 1000) + (60 * 60 * 12),
+            // @ts-ignore
             data: {data:{uid:rows[0].id}}
         }, secret);
 
@@ -55,9 +57,13 @@ export default defineEventHandler(async (event)=>{
         return responseJson(0,'ok',{
             accessToken:token,
             userInfo:{
+                // @ts-ignore
                 id:rows[0].id,
+                // @ts-ignore
                 nickname:rows[0].nickname,
+                // @ts-ignore
                 phone:rows[0].phone,
+                // @ts-ignore
                 avatar:rows[0].avatar,
             }
         })

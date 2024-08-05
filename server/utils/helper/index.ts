@@ -15,7 +15,7 @@ export const genTitle = () => {
 }
 
 //截取文章
-export const trimMarkdown = (content,maxLength) => {
+export const trimMarkdown = (content: any, maxLength: any) => {
     let strippedContent = content.replace(/#|\*|_|`/g, '');
     if (strippedContent.length > maxLength) {
         strippedContent = strippedContent.substr(0,maxLength) + '...'
@@ -23,7 +23,7 @@ export const trimMarkdown = (content,maxLength) => {
     return strippedContent
 }
 //获取文章第一张图片
-export const getFirstImage = (content) => {
+export const getFirstImage = (content: any) => {
     const regex = /!\[.*\]\((.*)\)/;
     const match = content.match(regex)
     if (match) {

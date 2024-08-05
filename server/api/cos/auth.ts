@@ -15,7 +15,7 @@ var config = {
     secretId: conf.SecretId, // 固定密钥
     secretKey: conf.SecretKey, // 固定密钥
     proxy: '',
-    durationSeconds: 1800,
+    durationSeconds: 120,
     // host: 'sts.tencentcloudapi.com', // 域名，非必须，默认为 sts.tencentcloudapi.com
     endpoint: 'sts.tencentcloudapi.com', // 域名，非必须，与host二选一，默认为 sts.tencentcloudapi.com
 

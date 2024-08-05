@@ -662,9 +662,7 @@ const uploadImages = async (files) => {
   }
 
 }
-.edit-note{
 
-}
 </style>
 
 <style>

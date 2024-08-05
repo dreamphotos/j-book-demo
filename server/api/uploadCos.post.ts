@@ -57,6 +57,7 @@ export default defineEventHandler(async (event)=>{
                 [avatarUrl,uid]);
             //释放连接
             await con.end()
+            // @ts-ignore
             if (rows.affectedRows === 0){
                 return  responseJson(1,'上传头像失败~',{})
             }
