@@ -30,6 +30,7 @@ export default defineEventHandler(async (event) => {
         const [rows] = await con.
         execute('UPDATE `users` SET `nickname`=? WHERE `id`=?',[body.nickname,uid])
         await con.end()
+        // @ts-ignore
         if (rows.affectedRows === 0) {
             return responseJson(1,'修改失败~~',{})
         }
